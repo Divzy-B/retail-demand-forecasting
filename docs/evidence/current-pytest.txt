@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0 -- /workspace/scratch/0ce564536140/RetailDemandForecasting/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /workspace/scratch/0ce564536140/RetailDemandForecasting
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1
+collecting ... collected 9 items
+
+tests/test_api.py::test_health_and_forecast_endpoint PASSED              [ 11%]
+tests/test_api.py::test_unknown_series_returns_not_found PASSED          [ 22%]
+tests/test_data.py::test_generator_is_reproducible_and_complete PASSED   [ 33%]
+tests/test_data.py::test_validation_rejects_duplicate_keys PASSED        [ 44%]
+tests/test_evaluation.py::test_metrics_match_hand_calculation PASSED     [ 55%]
+tests/test_evaluation.py::test_walk_forward_never_enters_final_holdout PASSED [ 66%]
+tests/test_features.py::test_features_do_not_use_current_or_future_target PASSED [ 77%]
+tests/test_features.py::test_chronological_split_is_strictly_ordered PASSED [ 88%]
+tests/test_pipeline.py::test_training_writes_artifacts_and_backtest PASSED [100%]
+
+============================== 9 passed in 2.15s ===============================

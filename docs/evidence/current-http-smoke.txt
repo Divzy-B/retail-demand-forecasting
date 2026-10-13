@@ -1,0 +1,7 @@
+GET /health 200
+GET /catalog 200
+GET /model/metrics 200
+POST /forecast: 200, four predictions, planned promotion propagated
+POST /forecast: 404
+POST /forecast: 422
+Missing model: 503

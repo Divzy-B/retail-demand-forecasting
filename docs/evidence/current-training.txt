@@ -1,0 +1,21 @@
+{
+  "artifact": "artifacts/publication/model_bundle.joblib",
+  "metrics": {
+    "validation_xgboost": {
+      "mae": 6.183264633119107,
+      "wape": 0.05902127399814132,
+      "bias": 0.0030180903715417585
+    },
+    "test_xgboost": {
+      "mae": 6.763413806855678,
+      "wape": 0.054748474977982096,
+      "bias": -0.01459644475271941
+    },
+    "test_baseline": {
+      "mae": 15.586875000000001,
+      "wape": 0.126172619374174,
+      "bias": -0.057490779913325574
+    }
+  },
+  "backtest_folds": 3
+}

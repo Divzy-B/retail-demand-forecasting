@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retail-demand-forecasting"
+version = "0.1.0"
+description = "Leakage-safe retail demand forecasting platform"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Retail Demand Forecasting contributors"}]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "scikit-learn>=1.4",
+  "xgboost>=2.0",
+  "joblib>=1.3",
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.27",
+  "pydantic>=2.6",
+]
+
+[project.optional-dependencies]
+dashboard = ["streamlit>=1.33", "plotly>=5.20"]
+mlflow = ["mlflow>=2.12"]
+dev = ["pytest>=8.0", "httpx>=0.27"]
+
+[project.scripts]
+retail-forecast-train = "retail_forecast.train:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
